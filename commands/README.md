@@ -32,5 +32,16 @@ python manage.py startapp contact
 *Crie nesta pasta "index.html"
 *Crie um "urls.py" dentro do app
 
+Migrando a base de dados do Django
+
+python manage.py makemigrations  (criar migrations)
+python manage.py migrate (apply migrations)
+
+Criando e modificando a senha de um super usuário Django
+
+python manage.py createsuperuser
+python manage.py changepassword "USERNAME"
+
+
 
 
