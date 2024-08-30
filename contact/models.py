@@ -1,13 +1,19 @@
 from django.db import models
 from django.utils import timezone
 
+## Passos de criação 
 # id (primary key - automático)
 # first_name (string), last_name (string), phone (string)
 # email (email), created_date (date), description (text)
 
 # Depois
-# category (foreign key), show (boolean), owner (foreign key)
-# picture (imagem)
+# show (boolean), picture (imagem), 
+
+# Então
+# category (foreign key)
+
+#Por último
+# owner (foreign key)
 
 
 class Contact(models.Model):
@@ -17,6 +23,8 @@ class Contact(models.Model):
     email = models.EmailField(max_length=254, blank=True)
     created_date = models.DateTimeField(default=timezone.now)
     description = models.TextField(blank=True)
+    show = models.BooleanField(default=True)
+    picture = models.ImageField(blank=True, upload_to='pictures/%Y/%m/')
 
     def __str__(self) -> str:
         return f'{self.first_name} {self.last_name}'
