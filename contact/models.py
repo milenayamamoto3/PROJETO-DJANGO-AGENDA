@@ -1,6 +1,9 @@
 from django.db import models
 from django.utils import timezone
 
+# class Meta
+# https://docs.djangoproject.com/pt-br/4.2/ref/models/options/
+
 ## Passos de criação 
 # id (primary key - automático)
 # first_name (string), last_name (string), phone (string)
@@ -16,6 +19,10 @@ from django.utils import timezone
 # owner (foreign key)
 
 class Category(models.Model):
+    class Meta:
+        verbose_name = 'Category'
+        verbose_name_plural = 'Categories'
+
     name = models.CharField(max_length=50)
 
     def __str__(self) -> str:
