@@ -98,7 +98,14 @@ Type "help", "copyright", "credits" or "license" for more information.
 <Contact: Edu Sousa>
 >>> quit()
 
-
+Criando um usuário no shell interativo
+python manage.py shell
+from django.contrib.auth.models import User
+user = User.objects.create_user(username='usuario', password='123') #não lazy
+user.is_staff = True #lazy
+user.save()
+user.delete()
+quit()
 
 
 
