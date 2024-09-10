@@ -107,6 +107,15 @@ user.save()
 user.delete()
 quit()
 
+Ignorando errors:
+mypy(error) -> # type: ignore
+Flake8(E501) -> # flake8: noqa
+
+Usando faker para criar contatos aleatórios:
+python -m pip install faker
+python utils/create_contact.py
+
+
 
 
 
