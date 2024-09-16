@@ -115,6 +115,10 @@ Usando faker para criar contatos aleatórios:
 python -m pip install faker
 python utils/create_contact.py
 
+Field lookups - Expressões para filtrar consultas no banco de dados de maneira 
+detalhada - filter(), exclude() e get()
+https://docs.djangoproject.com/en/4.2/ref/models/querysets/#field-lookups
+
 
 
 
