@@ -37,7 +37,14 @@ def search(request):
             Q(phone__icontains=search_value) |
             Q(email__icontains=search_value)
         )\
-        .order_by('-id')
+        .annotate(
+            first_name_priority=Q(first_name__icontains=search_value),
+            last_name_priority=Q(last_name__icontains=search_value),
+            email_priority=Q(email__icontains=search_value)
+        ) \
+        .order_by(
+            '-first_name_priority', '-last_name_priority', '-email_priority', 'first_name', 'last_name', 'email'
+        )
     
     # print(contacts.query) #consulta SQL na tabela
 
