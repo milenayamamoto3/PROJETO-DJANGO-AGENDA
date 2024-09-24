@@ -119,6 +119,9 @@ Field lookups - Expressões para filtrar consultas no banco de dados de maneira
 detalhada - filter(), exclude() e get()
 https://docs.djangoproject.com/en/4.2/ref/models/querysets/#field-lookups
 
+Pagination
+https://docs.djangoproject.com/en/4.2/topics/pagination/
+
 
 
 
