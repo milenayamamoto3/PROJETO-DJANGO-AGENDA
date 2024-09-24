@@ -122,6 +122,9 @@ https://docs.djangoproject.com/en/4.2/ref/models/querysets/#field-lookups
 Pagination
 https://docs.djangoproject.com/en/4.2/topics/pagination/
 
+CSRF (Cross-Site Request Forgery) é um tipo de ataque em que um usuário é induzido a realizar ações indesejadas em um site no qual está autenticado. Para proteger os usuários desse tipo de ataque, o Django usa uma proteção integrada chamada CSRF token.
+https://docs.djangoproject.com/en/5.1/ref/csrf/
+
 
 
 
