@@ -92,7 +92,7 @@ class RegisterForm(UserCreationForm):
         min_length=3,
         )
         email = forms.EmailField()
-        
+
         class Meta:
             model = User
             fields = (
@@ -104,6 +104,6 @@ class RegisterForm(UserCreationForm):
             if User.objects.filter(email=email).exists():
                 self.add_error(
                     'email',
-                    ValidationError('Já existe este e-mail', code='invalid')
+                    ValidationError('This email already exists', code='invalid')
                 )
             return email
