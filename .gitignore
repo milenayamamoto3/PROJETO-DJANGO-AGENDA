@@ -140,3 +140,9 @@ GitHub.sublime-settings
 !.vscode/launch.json 
 !.vscode/extensions.json 
 .history
+
+# commands
+commands/gunicorn1.txt
+commands/nginx-http1.txt
+commands/README1.md
+commands/SERVER.md
